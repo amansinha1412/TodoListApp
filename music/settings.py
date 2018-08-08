@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'band',
     'rest_framework',
     'todo',
     'django.contrib.admin',
