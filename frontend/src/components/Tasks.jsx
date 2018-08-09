@@ -37,7 +37,7 @@ class Tasks extends React.Component{
   }
   createTasks(data){
   
-  let thisComp = this
+   let thisComp = this
   const csrfToken = cookie.load('csrftoken') 
   
   fetch('/date/api/calendar', {
@@ -46,20 +46,21 @@ class Tasks extends React.Component{
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     'X-CSRFToken':csrfToken,
-    async:'false',
+    'async':'false',
   },
   body: JSON.stringify({
     message: this.state.task,
     date_for: data.selectedDate,
   }),
   credentials: 'include',
-})
- 
+}).then(( )=>{
+  console.log("post_request_complete")
   fetch('/date/api/calendar')
      .then(response => response.json())
      .then(data => this.setState({tasks:data}))
-  // this.loadTasks()
-  // this.render()
+  
+} )
+
   }
   
 	componentDidMount(){
