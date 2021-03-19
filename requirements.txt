@@ -3,7 +3,7 @@ chardet==3.0.4
 Django==2.1
 django-rest-framework==0.1.0
 django-webpack-loader==0.6.0
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 gulp==0.1.0
 idna==2.7
 optional-django==0.3.0
